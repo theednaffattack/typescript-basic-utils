@@ -1,0 +1,12 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "A bunch of one-liners and simple workhorse functions that I'll add to as I remember to.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eddie Naff",
+  "license": "ISC"
+}
