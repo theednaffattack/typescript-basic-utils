@@ -14,9 +14,9 @@ export function sleep(duration: number) {
 
 // Memoize tutorial: https://www.youtube.com/watch?v=WbwP4w6TpCk&t=0s
 
-export function memoize(cb: any) {
+export function memoize(cb: (...args: any[]) => any) {
   const cache = new Map();
-  return (...args: any) => {
+  return (...args: any[]) => {
     const key = JSON.stringify(args);
     if (cache.has(key)) return cache.get(key);
 
