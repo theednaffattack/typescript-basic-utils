@@ -1,0 +1,6 @@
+/.eslintrc
+/.prettierrc
+/.eslintignore
+
+# Hide node_modules
+node_modules

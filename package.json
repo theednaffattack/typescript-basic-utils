@@ -1,12 +1,65 @@
 {
-  "name": "utils",
+  "name": "js-dom-utils",
   "version": "1.0.0",
   "description": "A bunch of one-liners and simple workhorse functions that I'll add to as I remember to.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "prepare": "npx symlink-config",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Eddie Naff",
-  "license": "ISC"
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm run prettier-format && pnpm run lint",
+      "pre-push": ""
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": 1,
+      "prettier/prettier": 2
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "dist"
+  ],
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": false,
+    "printWidth": 80
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
+    "symlink-config": "^0.1.2",
+    "typescript": "^4.6.3"
+  },
+  "symlink-config": {
+    "path": "./support/root/"
+  }
 }
