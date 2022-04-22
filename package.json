@@ -12,15 +12,6 @@
   "keywords": [],
   "author": "Eddie Naff",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-push": "echo \"[Husky] pre-push\"",
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "pnpm run prettier-format && pnpm run lint"
-    }
-  },
   "eslintConfig": {
     "root": true,
     "parser": "@typescript-eslint/parser",
@@ -55,13 +46,10 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
     "prettier": "^2.6.2",
     "symlink-config": "^0.1.2",
     "typescript": "^4.6.3"
-  },
-  "symlink-config": {
-    "path": "./support/root/"
   }
 }
