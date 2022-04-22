@@ -1,5 +1,5 @@
 {
-  "name": "js-dom-utils",
+  "name": "ts-basic-utils",
   "version": "1.0.0",
   "description": "A bunch of one-liners and simple workhorse functions that I'll add to as I remember to.",
   "main": "index.js",
