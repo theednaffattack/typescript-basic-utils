@@ -2,7 +2,9 @@
   "name": "ts-basic-utils",
   "version": "1.0.0",
   "description": "A bunch of one-liners and simple workhorse functions that I'll add to as I remember to.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [],
   "type": "module",
   "scripts": {
     "lint": "eslint . --ext .ts",
