@@ -4,3 +4,6 @@
 
 # Hide node_modules
 node_modules
+
+# Hide builds for now
+dist
